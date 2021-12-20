@@ -1,0 +1,80 @@
+/* .preferences .form .input-title-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.preferences .form .input-title {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.preferences .form .input-title-wrapper .title-error {
+  color: var(--button-red);
+  margin-bottom: .1rem;
+}
+ 
+.preferences .form .label-pref {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--black-text);
+}
+
+.preferences .form .optional-section {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  color: var(--optional-section);
+}
+
+.preferences .course-search {
+  position: relative;
+}
+
+.preferences .course-search .button-add-preference {
+  all: unset;
+  position: absolute;
+  right: .3rem;
+  bottom: 50%;
+  z-index: 2;
+  transform: translate(0, 50%);
+  display: flex;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+.preferences .course-search .selected-courses-box {
+  margin-top: .5rem;
+}
+
+.preferences .course-search .selected-courses-box .selected-course-container {
+  display: inline-block;
+  border: .1rem solid var(--preference-course-border);
+  padding: .2rem 1rem;
+  border-radius: 10rem;
+  background-color: var(--preference-course-background);
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+
+.preferences .course-search .selected-courses-box .selected-course {
+  display: inline-block;
+  font-weight: 300;
+  margin-right: .5rem;
+}
+
+.preferences .course-search .selected-courses-box .selected-course-container .remove-course {
+  all: unset;
+  cursor: pointer;
+  height: .625rem;
+  color: var(--preference-course-border);
+  transition-duration: .2s;
+}
+
+.preferences .course-search .selected-courses-box .selected-course-container .remove-course:hover {
+  color: var(--button-red);
+} */

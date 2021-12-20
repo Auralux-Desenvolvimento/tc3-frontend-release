@@ -1,0 +1,47 @@
+.sunscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+  display: none;
+  transition: opacity ease .15s;
+  z-index: 10;
+}
+.fadeIn {
+  opacity: 0.2;
+}
+.sunscreen.active {
+  display: initial;
+}
+
+.sidebar {
+  position: fixed;
+  width: 70vw;
+  height: 100%;
+  top: 0;
+  right: -70vw;
+  transition: all .15s;
+  z-index: 11;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar.left {
+  right: auto;
+  left: -70vw;
+}
+.sidebar.left.active {
+  right: auto;
+  left: 0;
+}

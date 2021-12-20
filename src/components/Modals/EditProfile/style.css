@@ -1,0 +1,25 @@
+.edit-profile .controls {
+  display: flex;
+  justify-self: center;
+  align-items: flex-end;
+  transition: .15s all ease;
+}
+
+.edit-profile .controls .float-input {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.edit-profile .controls .input {
+  margin: 0;
+}
+
+.edit-profile .controls .responsive-button {
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: auto;
+}

@@ -1,0 +1,16 @@
+.merge-courses .course-option {
+  display: flex;
+  margin: 1rem .5rem;
+  align-items: center;
+}
+
+.merge-courses .course-option .course {
+  margin-left: .5rem;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .merge-courses .responsive-button {
+    width: auto;
+  }
+}

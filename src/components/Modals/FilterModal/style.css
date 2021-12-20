@@ -1,0 +1,37 @@
+.filter-modal {
+  width: 95%;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-modal .preferences-wrapper {
+  max-height: 90vh;
+  height: auto;
+  padding: 2rem 1.5rem;
+}
+
+.filter-modal .radio-content {
+  margin: 1rem 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.filter-modal .radio-content label{
+  margin-right: 1rem;
+}
+
+.filter-modal .radio-content .radio{
+  margin-right: .3rem;
+}
+
+.filter-modal .responsive-button {
+  margin-top: .5rem
+}
+
+@media (min-width:768px) {
+  .filter-modal .responsive-button {
+    width: auto;
+  }
+}

@@ -1,0 +1,6 @@
+@media (min-width: 768px) {
+  .create-post-modal .responsive-button {
+    width: auto;
+    padding: .25rem 2rem;
+  }
+}

@@ -1,0 +1,50 @@
+.login .title-login {
+  margin-bottom: 2rem;
+}
+
+.login .links-login {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login .forgot {
+  color: var(--black-text);
+  font-family: Lora;
+  font-size: 1rem;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.login .forgot:hover {
+  color: var(--optional-section);
+}
+
+.login .register-here {
+  color: var(--black-text);
+  font-family: Lora;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: .15s;
+  float: right;
+}
+
+.login .register-here:hover {
+  color: var(--optional-section);
+}
+
+.login .form-message {
+  margin-top:0.5rem;
+}
+
+@media (min-width: 768px) {
+  .background-linear {
+    background-image: linear-gradient(var(--pattern-purple), var(--dark-purple-title));
+    width: 40%;
+    height: 100%;
+  }
+
+  .title-login {
+    font-size: 3rem;
+    text-align: left;
+  }
+}

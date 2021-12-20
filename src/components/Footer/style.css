@@ -1,0 +1,37 @@
+.component-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 3rem;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.component-footer .children {
+  margin-bottom: .8rem;
+}
+
+.component-footer hr {
+  width: 60%;
+  border: .1rem solid var(--footer);
+  background-color: var(--footer);
+  opacity: 0.8;
+  border-radius: 99rem;
+}
+
+.component-footer p {
+  margin-top: .5rem !important;
+  margin-bottom: .5rem;
+  font-size: 0.625rem;
+  color: var(--footer) !important;
+  font-family: Raleway;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .component-footer p {
+    font-size: 1.125rem !important;
+  }
+}

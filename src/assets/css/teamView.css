@@ -1,0 +1,388 @@
+.team-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-view .inner-details, .team-view .inner-content {
+  padding: 0 3rem;
+}
+
+.team-view .navigation {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team-view .section-label {
+  color: var(--dark-purple-title);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Raleway", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team-view .hr {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 70%;
+  color: var(--background-logo-team-and-profile);
+}
+
+.team-view .navigation .favourite {
+  height: 1.875rem;
+  width: 1.875rem;
+  cursor: pointer;
+  color: var(--dark-purple-title);
+  transition: .15s;
+}
+
+.team-view .navigation .favourite:hover {
+  color: var(--button-purple);
+}
+
+.team-view .view-all {
+  color: var(--dark-purple-title);
+  margin-left: auto;
+  margin-right: .5rem;
+}
+
+.team-view .navigation *, .team-view .team .disinterest {
+  text-decoration-line: underline;
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all ease .15s;
+  background-color: inherit;
+}
+
+.team-view .view-all:hover {
+  color: var(--button-purple);
+}
+
+.team-view .report-team, .team-view .team .disinterest {
+  color: var(--button-red);
+}
+
+.team-view .report-team {
+  background: none;
+	border: none;
+}
+
+.team-view .report-team:hover {
+  opacity: .8;
+}
+
+.team-view .team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.team-view .team .interest {
+  padding: .5rem 3rem;
+  width: auto;
+  font-size: 1.065rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  line-height: 1rem;
+}
+
+.team-view .team .ban {
+  padding: .6rem 2.5rem;
+  width: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  line-height: 1rem;
+}
+
+.team-view .team .disinterest {
+  border: none;
+  margin-top: .75rem;
+}
+
+.team-view .team .disinterest:hover {
+  opacity: .8;
+}
+
+.team-view .team .photo {
+  border-radius: 50%;
+  border: 0.1rem solid var(--button-purple);
+  overflow: hidden;
+  width: 60%;
+  height: 0;
+  padding-bottom: 60%;
+  position: relative;
+}
+
+.team-view .team .photo img {
+  object-fit: contain;
+  background-color: var(--white-text);
+  color: var(--dark-purple-title);
+  font-size: .7rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.team-view .team .name {
+  font-size: 1.75rem;
+  font-family: "Raleway", Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 1.25rem;
+  color: var(--dark-purple-title);
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+.team-view .team .name .inner {
+  text-align: center;
+}
+
+.team-view .team .course {
+  font-weight: 400;
+  margin-top: .2rem;
+  font-size: 1rem;
+}
+
+.team-view .team .location {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1rem;
+}
+.team-view .team .banned-message {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.team-view .theme .name, .team-view .theme .description, .team-view .portfolio {
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.team-view .theme {
+  margin-top: 3rem;
+  max-width: 100%;
+}
+
+.team-view .theme .name {
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.team-view .members {
+  padding: 0;
+}
+
+.team-view .members .members-label,
+.team-view .advisors .advisor-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.team-view .members .members-label svg,
+.team-view .advisors .advisor-label svg {
+  font-size: 1.5rem;
+  color: var(--dark-purple-title);
+  cursor: pointer;
+  transition: .15s ease all;
+  border-radius: 99rem;
+  padding: .25rem;
+  box-sizing: content-box;
+}
+
+.team-view .members .members-label svg:hover,
+.team-view .advisors .advisor-label svg:hover {
+  color: var(--white-text);
+  background-color: var(--pattern-purple);
+}
+
+.team-view .members .members-label .section-label,
+.team-view .advisors .advisor-label .section-label {
+  margin: 0;
+  margin-right: 1rem;
+}
+
+.team-view .member-card+.member-card {
+  margin-top: 2rem;
+}
+
+.team-view .member-card .description {
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {  
+  .team-view .inner-content {
+    display: grid;
+    grid-template-columns: 31rem minmax(0, 1fr);
+    padding: 0;
+  }
+
+  .team-view .navigation {
+    margin: 2rem 3rem;
+  }
+
+  .team-view .inner-details {
+    padding-right: 0;
+  }
+  
+  .team-view .team {
+    display: grid !important;
+    grid-template-areas:
+    'photo name name'
+    'photo course course'
+    'photo location location'
+    'photo banned banned'
+    'photo interest disinterest';
+    justify-content: flex-start;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto;
+  }
+  
+  .team-view .team .photo { 
+    grid-area: photo;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 1rem;
+  }
+
+  .team-view .team .name { 
+    grid-area: name;
+    margin: 0;
+    margin-bottom: .5rem;
+    width: 100%;
+    /* line-height: 2rem; */
+    align-self: end;
+    max-height: 5rem;
+    /* height: 100%; */
+    text-align: left;
+    word-wrap: break-word;
+  }
+
+  .team-view .team .course { 
+    grid-area: course;
+    word-wrap: break-word;
+    align-self: end;
+  }
+
+  .team-view .team .location {
+    grid-area: location;
+    margin-bottom: .75rem;
+    align-self: start;
+  }
+
+  .team-view .team .banned-message {
+    grid-area: banned;
+    margin-bottom: .75rem;
+    align-self: start;
+  }
+
+  .team-view .team .interest { 
+    grid-area: interest;
+    margin: 0;
+    font-size: .9rem;
+    padding: .9rem 1rem !important;
+  }
+
+  .team-view .team .disinterest { 
+    grid-area: disinterest; 
+    margin: 0;
+  }
+
+  .team-view .inner-content .hr {
+    display: none;
+  }
+
+  .team-view .inner-content {
+    display: grid;
+  }
+
+  .team-view .members,
+  .team-view .advisors {
+    margin-top: 3rem;
+    padding-right: 0;
+  }
+
+  .team-view .members .members-label,
+  .team-view .advisors .advisor-label {
+    justify-content: space-between;
+  }
+
+  .team-view .members .section-label,
+  .team-view .advisors .section-label {
+    text-align: left;
+  }
+
+  .team-view .theme {
+    margin-top: 0;
+  }
+
+  .team-view .details {
+    display: flex;
+  }
+
+  .team-view .details .inner-details {
+    width: 100%;
+  }
+  
+  .team-view .details .vertical-bar {
+    position: relative;
+    margin: 0 1rem;
+    height: 100vh;
+    
+  }
+  
+  .team-view .details .vertical-bar::after {
+    position: fixed;
+    left: 29.9rem;
+    top: calc(50% + 2.2rem);
+    transform: translate(0, -50%);
+    background-color: var(--hr);
+    display: block;
+    content: "";
+    width: 0.2rem;
+    height: 75vh;
+    border-radius: 99rem;
+  }
+
+  .team-view .container-description {
+    margin-right: 3.5rem;
+  }
+  
+  .team-view .container-description .section-label {
+    text-align: left;
+  }
+
+  .team-view .container-description .name {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+
+  .team-view .container-description .description {
+    text-align: left;
+  }
+
+  .team-view .container-description .portfolio-wrapper {
+    margin-top: 2.375rem;
+  }
+
+  .team-view .container-description .portfolio {
+    text-align: left;
+  }
+}

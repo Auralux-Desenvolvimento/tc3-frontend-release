@@ -1,0 +1,72 @@
+.post-card-container {
+  background-color: var(--white-text);
+  padding: 1.8rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  transition: .15s;
+  margin: 1rem 0 2rem 0;
+  text-decoration: none;
+  color: inherit !important;
+  display: grid;
+  grid-template: 
+    "title remove" auto
+    "date remove" auto
+    "description description" max-content
+    / auto auto
+  ;
+  width: 100%;
+}
+
+.post-card-container .title {
+  font-family: Raleway, sans-serif;
+  color: var(--dark-purple-title);
+  font-size: 1.5rem;
+  
+  grid-area: title;
+}
+
+.post-card-container .date {
+  font-weight: 300;
+  margin-bottom: .5rem;
+  font-size: .9rem;
+  grid-area: date;
+}
+
+.post-card-container .description {
+  grid-area: description;
+}
+
+.post-card-container .description .rdw-editor-main {
+  overflow: initial;
+}
+
+.post-card-container .remove {
+  font-size: 2rem;
+  color: var(--dark-purple-title);
+  padding: .25rem;
+  border-radius: 0.625rem;
+  transition: .15s ease all;
+  cursor: pointer;
+  margin-left: auto;
+  grid-area: remove;
+  align-self: start;
+  justify-self: end;
+}
+
+.post-card-container .remove:hover {
+  color: var(--white-text);
+  background-color: var(--error);
+}
+
+.post-card-container .author {
+  grid-area: remove;
+  justify-self: end;
+  align-self: start;
+}
+
+@media (min-width:768px) {
+  .post-card-container .title {
+    font-size: 1.8rem;
+  }
+}

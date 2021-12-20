@@ -1,0 +1,408 @@
+.chat-page.page {
+  min-height: calc(100vh - 9rem);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-top: 9rem;
+}
+
+.chat-page .chat-header {
+  display: grid;
+  grid-template: 
+  "return team team team"
+  "report report accept agreement"
+  / auto auto 1fr auto;
+  padding: .5rem 1.3rem;
+  border-bottom: 1px solid var(--pattern-purple);
+  width: 100%;
+  height: 5.5rem;
+  background-color: var(--general-background);
+}
+
+.chat-page .chat-header .reject-agreement,
+.chat-page .chat-header .cancel-agreement {
+  grid-area: agreement;
+  width: auto;
+  cursor: pointer;
+  background-color: var(--error);
+  color: var(--white-text);
+  border: 0.063rem solid var(--error);
+  border-radius: 0.625rem;
+  justify-self: left;
+  font-weight: 24;
+  font-size: .9rem;
+  font-family: Poppins;
+  text-transform: initial;
+  transition: .15s all ease;
+  padding: 0 .4rem;
+  text-decoration: none;
+  margin-left: .5rem;
+}
+
+.chat-page .chat-header .reject-agreement:hover,
+.chat-page .chat-header .cancel-agreement:hover {
+  background-color: var(--white-text);
+  color: var(--error);
+  border: 0.063rem solid var(--error);
+}
+
+.chat-page .chat-header .accept-agreement {
+  grid-area: accept;
+  width: auto;
+  cursor: pointer;
+  background-color: var(--success);
+  color: var(--white-text);
+  border: 0.063rem solid var(--success);
+  border-radius: 0.625rem;
+  justify-self: right;
+  font-weight: 24;
+  font-size: .9rem;
+  font-family: Poppins;
+  text-transform: initial;
+  transition: .15s all ease;
+  padding: 0 .4rem;
+  text-decoration: none;
+}
+
+.chat-page .chat-header .accept-agreement:hover {
+  background-color: var(--white-text);
+  color: var(--success);
+  border: 0.063rem solid var(--success);
+}
+
+.chat-page .chat-header .cancel-agreement {
+  grid-area: agreement;
+}
+
+.chat-page .chat-header .return-wrapper {
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+  margin-right: .5rem;
+}
+
+.chat-page .chat-header .return {
+  padding: -.25rem;
+  grid-area: return;
+  width: 2rem;
+  height: 2rem;
+  color: var(--dark-purple-title);
+  transition: .15s all ease;
+  border-radius: 99rem;
+}
+
+.chat-page .chat-header .return:hover {
+  color: var(--white-text);
+  background-color: var(--pattern-purple);
+}
+
+.chat-page .chat-header .team-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: team;
+  justify-self: left;
+}
+
+.chat-page .chat-header .title {
+  font-family: 'Raleway', sans-serif;
+  color: var(--dark-purple-title);
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.chat-page .chat-header .title::after {
+  transition: .15s all ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: .075rem;
+}
+
+.chat-page .chat-header .title:hover::after {
+  background-color: var(--dark-purple-title);
+}
+
+.chat-page .chat-header .status {
+  grid-area: status;  
+  align-self: center;
+  margin-left: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.chat-page .chat-header .status::before {
+  content: "";
+  position: absolute;
+  left: -.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: .75rem;
+  width: .75rem;
+  border-radius: 99rem;
+}
+
+.chat-page .chat-header .status.offline::before {
+  background-color: var(--optional-section);
+}
+
+.chat-page .chat-header .status.online::before {
+  background-color: var(--success);
+}
+
+.chat-page .chat-header .status.offline {
+  color: var(--footer);
+}
+
+.chat-page .chat-header .status.online {
+  color: var(--success);
+}
+
+.chat-page .chat-header .report-team {
+  border:none;
+  text-decoration-line: underline;
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all ease .15s;
+  grid-area: report;
+  color: var(--button-red);
+  background: none !important;
+  text-align: left;
+}
+
+.chat-page .chat-header .report-team:hover {
+  opacity: .8;
+}
+
+.chat-page .chat-header .agreement-button {
+  grid-area: agreement;
+  width: auto;
+  cursor: pointer;
+  background-color: var(--button-purple);
+  color: var(--white-text);
+  border: 0.063rem solid var(--button-purple);
+  border-radius: 0.625rem;
+  justify-content: center;
+  font-weight: 24;
+  font-size: .9rem;
+  font-family: Poppins;
+  text-transform: initial;
+  transition: .15s all ease;
+  padding: .25rem .5rem;
+  text-decoration: none;
+}
+
+.chat-page .chat-header .agreement-button:hover {
+  background-color: var(--white-text);
+  color: var(--button-purple);
+  border: 0.063rem solid var(--button-purple);
+}
+
+.chat-page .chat-header .rejected-agreement,
+.chat-page .chat-header .canceled-agreement {
+  grid-area: agreement;
+  text-align: right;
+  padding: 0 .5rem;
+  color: var(--text-preview);
+  font-style: italic;
+  font-size: .9rem;
+  align-self: center;
+}
+
+.chat-page .chat {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: column;
+  padding: 1.3rem;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1600px;
+  min-height: 55vh;
+  flex-grow: 1;
+}
+
+.chat-page .chat .date {
+  background-color: var(--chat-other-message);
+  color: var(--white-text);
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  margin-bottom: .5rem;
+}
+
+.chat-page .controls-wrapper {
+  position: sticky;
+  bottom: 0;
+  padding: .25rem 1.3rem;
+  background-color: var(--general-background);
+}
+
+.chat-page .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-page .controls .float-input {
+  width: auto;
+  flex-grow: 1;
+  margin-right: .5rem;
+}
+
+.chat-page .controls button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  padding-top: 1.4rem;
+  height: min-content;
+}
+
+.chat-page .controls button svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--chat-other-message);
+  transition: .15s all ease;
+}
+
+.chat-page .controls button svg:hover {
+  color: var(--pattern-purple);
+}
+
+.chat-page .controls button svg:active {
+  opacity: .8;
+}
+
+.chat-page .controls-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--pattern-purple);
+}
+
+.chat-page .chat .no-messages {
+  display: flex;
+  width: 100%;
+  height: 55vh;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-page .chat .start-conversation {
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-preview);
+}
+
+.chat-page .scroll-down-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: var(--pattern-purple);
+  border-radius: 99rem; 
+  z-index: 5;
+  -webkit-box-shadow: 0 .25rem .5rem var(--shadow); 
+  box-shadow: 0 .25rem .5rem var(--shadow);
+  transition: .15s ease all;
+  color: var(--white-text);
+  bottom: 6.4rem;
+  left: 1.4rem;
+  border: none;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+}
+
+.chat-page .scroll-down-wrapper:hover {
+  background-color: var(--white-text);
+  color: var(--pattern-purple);
+  -webkit-box-shadow: 0 .3rem .75rem var(--shadow); 
+  box-shadow: 0 .3rem .75rem var(--shadow);
+}
+
+.chat-page .scroll-down {
+  border-radius: 99rem;
+  transition: .15s all ease;
+  font-size: 2rem;
+}
+
+.chat-page .component-footer {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .chat-page.page {
+    min-height: calc(100vh - 7.5rem);
+    margin-top: 7.5rem;
+  }
+
+  .chat-page .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+  }
+
+  .chat-page .chat-header .title, .chat-page .chat-header .status {
+    flex-shrink: 1;
+  }
+
+  .chat-page .chat-header .team-name {
+    margin-right: auto;
+  }
+
+  .chat-page .chat-header .return {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .chat-page .chat-header .report-team {
+    text-align: center;
+    margin-left: 1rem;
+  }
+
+  .chat-page .chat-header .agreement-button {
+    text-align: center;
+    margin-left: auto;
+  }
+
+  .chat-page .chat-header .agreement-button + .report-team {
+    margin-left: 1rem;
+  }
+
+  .chat-page .chat-header .reject-agreement {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .chat-page .chat-header .accept-agreement {
+    margin-left: 1rem;
+  }
+
+  .chat-page .chat-header .cancel-agreement {
+    margin-left: auto;
+  }
+
+  .chat-page .chat-header .rejected-agreement,
+  .chat-page .chat-header .canceled-agreement {
+    font-size: 1rem;
+    margin-left: auto;
+  }
+}

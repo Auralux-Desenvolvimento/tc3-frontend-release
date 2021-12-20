@@ -1,0 +1,172 @@
+.about-us {
+  margin-top: 4.5rem;
+}
+
+.about-us.visitor {
+  margin-top: 0;
+}
+
+.about-us .back-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: var(--pattern-purple);
+  border-radius: 99rem; 
+  font-size: 3rem;
+  z-index: 5;
+  -webkit-box-shadow: 0 .25rem .5rem var(--shadow); 
+  box-shadow: 0 .25rem .5rem var(--shadow);
+  transition: .15s ease all;
+  top: .5rem;
+  left: .5rem;
+  color: var(--white-text);
+}
+
+.about-us .back-button-div:hover {
+  background-color: var(--white-text);
+  color: var(--pattern-purple);
+  -webkit-box-shadow: 0 .3rem .75rem var(--shadow); 
+  box-shadow: 0 .3rem .75rem var(--shadow);
+}
+
+.about-us .back-button-div .return {
+  transition: .15s all ease;
+  border-radius: 99rem;
+}
+
+/* .about-us .back-button-div .return:hover {
+  color: var(--white-text);
+  background-color: var(--pattern-purple);
+} */
+
+.about-us .title,
+.about-us .auralux {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: var(--dark-purple-title);
+  padding: 1.5rem 1rem;
+}
+
+.about-us .image {
+  border-radius: 400rem;
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.about-us .image:first-child {
+  margin-top: 2rem;
+}
+
+.about-us .dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.about-us .dev-name {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--dark-purple-title);
+  text-align: center;
+}
+
+.about-us .dev-description {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.about-us .team-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us .logo {
+  width: 95%;
+  height: auto;
+  max-width: 768px;
+}
+
+@media (min-width: 768px) {
+  .about-us .title {
+    font-size: 3rem;
+  }
+
+  .about-us .dev {
+    margin: 2rem 0;
+    display: grid;
+    column-gap: .5rem;
+    align-items: initial;
+  }
+
+  .about-us .dev.left {
+    grid-template:
+    "photo name contact" 3rem
+    "photo description contact" 7rem
+    / 10rem 1fr auto;
+  }
+
+  .about-us .dev.right {
+    grid-template:
+    "contact name photo" 3rem
+    "contact description photo" 7rem
+    / auto 1fr 10rem;
+  }
+
+  .about-us .contact-info {
+    grid-area: contact;
+    align-self: center;
+  }
+
+  .about-us .dev.right .contact-info {
+    justify-self: flex-start;
+  }
+
+  .about-us .dev.left .contact-info {
+    justify-self: flex-end;
+  }
+
+  .about-us .image {
+    grid-area: photo;
+    margin-bottom: 0;
+  }
+  .about-us .image:first-child {
+    margin-top: 0;
+  }
+
+  .about-us .dev-name {
+    grid-area: name;
+  }
+
+  .about-us .dev.left .dev-name {
+    text-align: left;
+  }
+
+  .about-us .dev.right .dev-name {
+    text-align: right;
+  }
+
+  .about-us .dev-description {
+    grid-area: description;
+    margin: 0;
+  }
+
+  .about-us .dev.left .dev-description {
+    text-align: left;
+  }
+
+  .about-us .dev.right .dev-description {
+    text-align: right;
+  }
+
+}

@@ -1,0 +1,138 @@
+.search-page {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.search-page .content {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+.search-page .not-found {
+  margin: auto;
+}
+
+.search-page .content .controls {
+  display: grid;
+  grid-template-areas:
+  "label details"
+  "filter filter"
+  ;
+  align-content: center;
+  margin: 2rem 1.2rem;
+}
+
+.search-page .content .content-title {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: var(--dark-purple-title);
+  grid-area: label;
+}
+
+.search-page .content .one-team-view {
+  text-decoration-line: underline;
+  color: var(--dark-purple-title);
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .15s;
+  grid-area: details;
+  justify-self: end;
+  align-self: center;
+}
+
+.search-page .content .one-team-view:hover {
+  color: var(--button-purple);
+}
+
+.search-page .content .content-title + .filter-icon {
+  grid-area: details;
+}
+
+.search-page .content .filter-icon {
+  color: var(--dark-purple-title);
+  width: 1.5rem;
+  height: 1.5rem;
+  grid-area: filter;
+  justify-self: end;
+  cursor: pointer;
+  transition: .15s all ease;
+}
+
+.search-page .content .filter-icon:hover {
+  color: var(--button-purple);
+}
+
+.search-page .teams {
+  display: flex;
+  flex-flow: column;
+}
+
+.search-page .content .team-card {
+  margin: 2rem 1.2rem;
+  width: auto;
+}
+
+.search-page .error {
+  margin: auto;
+  margin-bottom: 12rem;
+}
+
+@media (min-width: 768px) and (max-width: 803px) {
+  .search-page .teams {
+    justify-content: center !important;
+  }
+
+  .search-page .teams .team-card {
+    max-width: none;
+  }
+}
+
+@media (min-width: 804px) {
+  .search-page .teams {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .search-page .teams .team-card {
+    max-width: calc(50% - 1.2rem);
+    min-width: 30%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+
+  .search-page .content .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .search-page .content .filter-icon {
+    order: 1;
+    margin-right: auto;
+    margin-left: .75rem;
+  }
+
+  .search-page .content .content-title {
+    order: 0;
+  }
+
+  .search-page .content .one-team-view {
+    order: 2;
+  }
+
+  .search-page .no-team {
+    display: block;
+    margin: auto;
+  }
+
+  .search-page .error {
+    margin-bottom: 17rem;
+  }
+}

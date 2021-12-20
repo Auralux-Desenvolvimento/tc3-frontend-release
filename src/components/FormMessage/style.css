@@ -1,0 +1,16 @@
+.form-message {
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
+.form-message.success strong {
+  color: var(--success);
+}
+
+.form-message.warning strong {
+  color: var(--warning);
+}
+
+.form-message.error strong {
+  color: var(--error);
+}

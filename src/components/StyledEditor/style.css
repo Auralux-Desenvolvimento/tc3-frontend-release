@@ -1,0 +1,60 @@
+.styled-editor {
+  height: 100%;
+}
+
+.styled-editor .inner {
+  height: 100%;
+  border: 0.125rem solid var(--pattern-purple);
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  border-radius: 0.375rem;
+}
+
+.styled-editor .editor {
+  flex-grow: 1;
+  height: auto;
+}
+
+.styled-editor .toolbar {
+  border: none;
+  background: none;
+  position: relative;
+  padding: .45rem;
+}
+
+.styled-editor .toolbar .rdw-option-wrapper, .styled-editor .toolbar .rdw-dropdown-wrapper {
+  background-color: var(--light-shadow);  
+}
+
+.styled-editor .toolbar .rdw-option-wrapper, 
+.styled-editor .toolbar .rdw-dropdown-wrapper, 
+.styled-editor .toolbar .rdw-dropdown-optionwrapper {
+  transition: .15s all ease;
+}
+
+.styled-editor .toolbar .rdw-option-wrapper:hover, 
+.styled-editor .toolbar .rdw-dropdown-wrapper:hover {
+  box-shadow: 0 0 .25rem var(--purple-shadow);
+}
+
+.styled-editor .toolbar .rdw-option-active {
+  box-shadow: 0 0 .3rem var(--purple-shadow);
+  background-color: var(--white-text);
+}
+
+.styled-editor .toolbar .rdw-dropdown-optionwrapper:hover {
+  box-shadow: none;
+}
+
+.styled-editor .toolbar::after {
+  position: absolute;
+  bottom: 0;
+  width: 99%;
+  content: "";
+  height: 1px;
+  background-color: var(--button-purple-hover);
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,26 @@
+.recovery-password-form .recovery-password-text {
+  text-align: left;
+  padding-bottom: 1.5rem;
+}
+
+.recovery-password-form .responsive-button {
+  margin-top: 1rem;
+}
+
+.loading-recovery-password {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2.188rem;
+}
+
+@media (min-width: 768px) {
+  .recovery-password-form .responsive-button {
+    max-width: 25%;
+  }
+}

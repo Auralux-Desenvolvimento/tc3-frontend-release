@@ -1,0 +1,25 @@
+.members-photo-wrapper .responsive-button{
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .members-photo-wrapper {
+    display: grid;
+    grid-template:
+    "theme remove-theme"
+    /2fr auto;
+    align-items: center;
+    column-gap: .5rem
+  }
+
+  .members-photo-wrapper .photo {
+    grid-area: theme;
+  }
+
+  .members-photo-wrapper .responsive-button {
+    margin-top: .5rem;
+    grid-area: remove-theme;
+    height: 2.5rem;
+    width:auto;
+  }
+}

@@ -1,0 +1,41 @@
+.courses-page {
+  margin-top: 7.5rem;
+  min-height: calc(100vh - 7.5rem);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.courses-page .content {
+  padding: .5rem 3rem;
+}
+
+.courses-page .content .button-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.courses-page .content .responsive-button{
+  margin-top: .5rem;
+  padding: 0.2rem 1rem;
+  width: fit-content;
+}
+
+.courses-page .content .course-list .not-found {
+  margin: auto auto;
+}
+
+@media (min-width:768px) {  
+  .courses-page {
+    margin-top: 8.625rem;
+    min-height: calc(100vh - 8.625rem);
+  }
+
+  .courses-page .content {
+    padding: .5rem 5rem;
+  }
+
+  .courses-page .content .responsive-button{
+    padding: 0.2rem 1.4rem;
+  }
+}

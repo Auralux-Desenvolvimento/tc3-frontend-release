@@ -1,0 +1,17 @@
+.all-reports .content-list {
+  margin: 0 2.5rem;
+}
+
+.all-reports .page-selector-wrap {
+  margin-top: 1rem;
+}
+
+.all-reports .component-footer {
+  padding-top: 1rem;
+}
+
+@media (min-width:768px) {
+  .all-reports .page-selector-wrap {
+    margin-top: 0;
+  }  
+}

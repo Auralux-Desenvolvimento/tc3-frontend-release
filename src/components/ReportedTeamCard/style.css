@@ -1,0 +1,120 @@
+.reported-card-container {
+  background-color: var(--white-text);
+  padding: 1.8rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: .15s;
+  margin: 1rem 0 2rem 0;
+  text-decoration: none;
+  color: inherit !important;
+  display: grid;
+  grid-template:
+  "photo name" 2rem 
+  "photo course" 2rem
+  "theme theme" auto
+  "buttons buttons" auto
+  / 4rem auto;
+}
+
+.reported-card-container:hover {
+  -moz-box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+  -webkit-box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+  box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+}
+
+
+.reported-card-container .photo {
+  grid-area: photo;
+  border-radius: 50%;
+  border: 0.1rem solid var(--button-purple);
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--preference-course-background);
+  transition: .2s;
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.reported-card-container .name,
+.reported-card-container .course {
+  margin-left: .5rem;
+  word-wrap: break-word;
+}
+
+.reported-card-container .name {
+  grid-area: name;
+  font-family: Raleway, sans-serif;
+  color: var(--dark-purple-title);
+  font-size: 1.5rem;
+}
+
+.reported-card-container .course {
+  grid-area: course;
+  font-weight: 300;
+  font-size: 1rem
+}
+
+.reported-card-container .theme {
+  grid-area: theme;
+  font-weight: 300;
+  margin-top: .5rem;
+  word-break: break-all;
+}
+
+.reported-card-container .buttons {
+  grid-area: buttons;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reported-card-container .buttons .see-profile {
+  text-decoration-line: underline;
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all ease .15s;
+  color: var(--text-preview);
+}
+
+.reported-card-container .buttons .see-profile:hover {
+  opacity: .8;
+}
+
+.reported-card-container .buttons .responsive-button {
+  margin-top: 0 !important;
+  font-size: 0.9rem !important;
+  padding: .5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .reported-card-container {
+    grid-template:
+    "photo name" 3rem 
+    "photo course" 2rem
+    "photo theme" 3rem
+    "buttons buttons" auto
+    / 8rem auto;
+  }
+
+  .reported-card-container .photo {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .reported-card-container .name {
+    align-self: flex-end;
+  }
+}

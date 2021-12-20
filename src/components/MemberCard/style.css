@@ -1,0 +1,135 @@
+.member-card {
+  background-color: var(--white-text);
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  display: block;
+  -webkit-box-shadow: 0 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.member-card {
+  text-align: center;
+}
+
+.member-card .remove {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--dark-purple-title);
+  padding: .25rem;
+  border-radius: 0.625rem;
+  transition: .15s ease all;
+  cursor: pointer;
+}
+
+.member-card .remove:hover {
+  color: var(--white-text);
+  background-color: var(--error);
+}
+
+.member-card .photo {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 99rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-card .name {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.member-card .age {
+  font-weight: 300;
+  margin-top: 0.3rem;
+}
+
+.member-card .role {
+  font-weight: 500;
+  margin-top: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.member-card .description {
+  text-align: justify;
+  font-family: "Lora", Times New Roman, Times, serif;
+  margin-top: 1.5rem;
+}
+
+.member-card strong {
+  font-weight: normal;
+  font-family: Lora;
+  line-height: 1.037rem;
+}
+
+@media (min-width: 768px) {
+  .member-card {
+    display: grid;
+    grid-template: 
+    "photo name name"
+    "photo age age"    
+    "photo role role"
+    "description description description"
+    / auto 1fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 500px;
+  }
+  .member-card .photo {
+    grid-area: photo;
+    border-radius:100%;
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: contain;
+    
+    display: block;
+    margin-bottom: 0;
+
+    background-color: var(--background-logo-team-and-profile);
+    
+    line-height: 7.5rem;
+    text-align: center;
+    color:var(--button-purple);
+  }
+
+  .member-card .name {
+    grid-area: name;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-left:0;
+    margin-right: auto;
+    width: 100%;
+    padding-right: 2.25rem;
+  }
+  
+  .member-card .age {
+    grid-area: age;
+    text-align: left;
+    font-size: .9rem;
+    line-height: .7rem;
+  }
+
+  .member-card .role {
+    grid-area: role;
+    text-align: left;
+    font-size: .9rem;
+    line-height: .7rem;
+    margin-top: 0;
+  }
+
+  .member-card .name,
+  .member-card .age,
+  .member-card .role {
+    margin-left: .3rem;
+    margin-top: 0;
+  }
+
+  .member-card .description {
+    grid-area: description;
+    margin-top: .5rem;
+  }
+}

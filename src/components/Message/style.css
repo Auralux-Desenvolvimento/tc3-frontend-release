@@ -1,0 +1,67 @@
+.message-wrapper {
+  background-color: var(--chat-other-message);
+  margin-bottom: .5rem;
+  padding: .5rem 1rem;
+  border-radius: 0 10px 10px 10px;
+  margin-right: auto;
+  max-width: 15rem;
+}
+
+.message-wrapper.mine {
+  background-color: var(--chat-my-message);
+  border-radius: 10px 0 10px 10px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.message-wrapper .message {
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+.message-wrapper .time {
+  padding-top: .5rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.message-wrapper .message,
+.message-wrapper .time {
+  color: var(--white-text);
+  font-family: Roboto, sans-serif;
+}
+
+.message-wrapper.mine .message,
+.message-wrapper.mine .time {
+  text-align: right;
+}
+
+.message-wrapper.mine .info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.message-wrapper .time {
+  margin-right: .4rem;
+}
+
+.message-wrapper .icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: -.4rem;
+}
+
+.message-wrapper .icon.seen {
+  color: var(--white-text);
+}
+
+.message-wrapper .icon.unseen {
+  color: var(--unseen-message)
+}
+
+@media (min-width: 768px) {
+  .message-wrapper {
+    max-width: 650px;
+  }
+}

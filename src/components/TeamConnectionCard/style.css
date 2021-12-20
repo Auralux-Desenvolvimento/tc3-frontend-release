@@ -1,0 +1,137 @@
+.team-connection-card {
+  text-decoration: none;
+}
+
+.connection-card {
+  display: grid;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 1rem 0 1rem;
+  grid-template:
+  "photo name status hourMessage"
+  "photo description description unavailable"
+  /auto auto 2fr auto;
+  padding-bottom: 1rem;
+  border-bottom: .1rem solid var(--hr);
+}
+
+.connection-card .photo {
+  border: .1rem solid var(--hr);
+  grid-area: photo;
+  border-radius: 5rem;
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+  align-self: center;
+  object-fit: contain;
+}
+
+.connection-card .name {
+  grid-area: name;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-self: center;
+  color: var(--dark-purple-title);
+}
+
+.connection-card .description {
+  grid-area: description;
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--text-preview);
+  align-self: center;
+}
+
+.connection-card .hourMessage {
+  grid-area: hourMessage;
+  font-family: "Lora";
+  align-self: center;
+}
+
+.connection-card .status {
+  grid-area: status;
+  align-self: center;
+  margin-left: 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.connection-card .status.offline {
+  color: var(--footer);
+}
+
+.connection-card .status.online {
+  color: var(--success);
+}
+
+.connection-card .status::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: .75rem;
+  width: .75rem;
+  border-radius: 99rem;
+}
+
+.connection-card .status.offline::before {
+  background-color: var(--optional-section);
+}
+
+.connection-card .status.online::before {
+  background-color: var(--success);
+}
+
+.connection-card .unavailable-seen {
+  grid-area: unavailable;
+  display: flex;
+}
+
+.connection-card .unavailable {
+  color: var(--error);
+  justify-self: right;
+  margin-left: .2rem;
+}
+
+.connection-card .icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.connection-card .icon.seen {
+  color: var(--dark-purple-title);
+}
+
+.connection-card .icon.unseen {
+  color: var(--unseen-message);
+}
+
+@media (max-width: 768px) {
+  .connection-card {
+    margin-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .team-connection-card {
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+  }
+  
+  .connection-card {
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+}

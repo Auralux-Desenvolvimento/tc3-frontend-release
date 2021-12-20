@@ -1,0 +1,139 @@
+.report-card-container {
+  background-color: var(--white-text);
+  padding: 1.8rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: .15s;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: inherit !important;
+  display: grid;
+  grid-template:
+  "photo tag" 1.5rem 
+  "photo name" 2.5rem
+  "message message"
+  "button button" auto
+  / 4rem auto;
+  position: relative;
+}
+
+.report-card-container:hover {
+  -moz-box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+  -webkit-box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+  box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+}
+
+.report-card-container .photo {
+  grid-area: photo;
+  border-radius: 50%;
+  border: 0.1rem solid var(--button-purple);
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--preference-course-background);
+  transition: .2s;
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.report-card-container .name-team {
+  grid-area: name;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--dark-purple-title);
+  margin-bottom: 0.2rem;
+  margin-left: .5rem;
+}
+
+.report-card-container .type-report {
+  grid-area: tag;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--white-text);
+  background-color: var(--chat-other-message);
+  border-radius: 99rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  padding: .1rem .5rem;
+  height: min-content;
+  justify-self: end;
+}
+
+.report-card-container .description-report {
+  grid-area: message;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+  margin-top: .5rem;
+}
+
+.report-card-container .description-report strong {
+  margin-right: .25rem;
+  font-weight: 500;
+}
+
+.report-card-container .responsive-button {
+  grid-area: button;
+  width: auto;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .report-card-container {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    grid-template:
+    "photo name tag" 2rem 
+    "photo message message" 1fr
+    "photo button button" auto
+    / 8rem auto;
+  }  
+
+  .report-card-container .name-team {
+    font-size: 1.8rem;
+  }
+
+  .report-card-container .description-report {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: .5rem;
+    font-size: 1.2rem;
+  }
+
+  .report-card-container .responsive-button {
+    width: auto;
+    justify-self: end;
+    margin-top: .5rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 2.5rem;
+    align-self: end;
+  }
+
+  .report-card-container .photo {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .report-card-container .type-report {
+    font-size: 1.1rem;
+    padding: .2rem 1rem;
+  }
+}

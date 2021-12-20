@@ -1,0 +1,34 @@
+.search-list {
+  position: relative;
+  padding-top: 1.4rem;
+}
+
+.search-list .error {
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--button-red);
+  font-family: Roboto;
+}
+
+.search-list .button-add-preference {
+  all: unset;
+  position: absolute;
+  right: .3rem;
+  bottom: 50%;
+  z-index: 2;
+  transform: translate(0, 50%);
+  display: flex;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+.search-list .tags {
+  margin-top: .5rem;
+}
+
+.search-list .tags .tag-container {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}

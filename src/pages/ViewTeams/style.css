@@ -1,0 +1,27 @@
+.view-teams-page .content {
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.view-teams-page {
+  margin-top: 7.5rem;
+  min-height: calc(100vh - 7.5rem);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+@media (min-width:768px) {
+  .view-teams-page .content {
+    padding: 0 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .view-teams-page {
+    margin-top: 8.625rem;
+    min-height: calc(100vh - 8.625rem);
+  }
+}

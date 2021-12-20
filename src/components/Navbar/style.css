@@ -1,0 +1,46 @@
+
+
+.navbar .menu-option .option-text .notification-dot {
+  background-color: var(--dark-purple-title);
+  align-items: center;
+  border-radius: 100%;
+  height: .7rem;
+  width: .7rem;
+  margin-left: .5rem;
+}
+
+.navbar .sidebar-options {
+  margin-left: auto;
+}
+
+.navbar .sidebar-menu-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navbar .sidebar-menu-option .sidebar-option .notification-dot {
+  background-color: var(--white-text);
+  border-radius: 100%;
+  height: .6rem;
+  width: .6rem;
+}
+
+.navbar .menu-option.selected .option-text .notification-dot,
+.navbar .menu-option:hover .option-text .notification-dot {
+  background-color: var(--white-text); 
+}
+
+.navbar .sidebar-menu-option.selected .sidebar-option .notification-dot {
+  background-color: var(--chat-my-message); 
+}
+
+.navbar .sidebar-background .sidebar-icon {
+  color: var(--white-text);
+  cursor: pointer;
+  transition: .15s all ease;
+}
+
+.navbar .sidebar-background .sidebar-icon:hover {
+  color: var(--chat-my-message);
+}

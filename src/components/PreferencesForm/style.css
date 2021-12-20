@@ -1,0 +1,57 @@
+.form-container .form .input-title-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.form-container .form .input-title {
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.form-container .form .input-title-wrapper .title-error {
+  color: var(--button-red);
+  margin-bottom: .1rem;
+}
+
+.form-container .form .label-pref {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: var(--black-text);
+}
+
+.form-container .form .optional-section {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  color: var(--optional-section);
+}
+
+.form-container .course-search {
+  position: relative;
+}
+
+.form-container .course-search .button-add-preference {
+  all: unset;
+  position: absolute;
+  right: .3rem;
+  bottom: 50%;
+  z-index: 2;
+  transform: translate(0, 50%);
+  display: flex;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+.form-container .course-search .selected-courses-box {
+  margin-top: .5rem;
+}
+
+.form-container .course-search .selected-courses-box .selected-course-container {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}

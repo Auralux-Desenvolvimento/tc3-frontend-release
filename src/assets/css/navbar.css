@@ -1,0 +1,315 @@
+.navbar-wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: -2rem;
+  width: 100vw;
+  transition: .15s ease all;
+  z-index: 99;
+}
+
+.navbar-wrapper.error {
+  top: 0;
+}
+
+.navbar-wrapper .error-message {
+  position: static;
+}
+
+.page {
+  margin-top: 4.5rem;
+  transition: .15s all ease;
+  min-height: calc(100vh - 4.5rem);
+}
+
+.page.error {
+  margin-top: 6.5rem;
+}
+
+.navbar {
+  background: var(--white-text);
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 .35rem .625rem rgba(0, 0, 0, .25);
+  padding: 0 1.5rem;
+  height: 4.5rem;
+  z-index: 20;
+  display: flex;
+  position: relative;
+  z-index: 20;
+}
+
+.navbar .navbar-elements {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100%;
+}
+
+.navbar .logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .logo {
+  width: 6rem;
+  height: auto;
+}
+
+.navbar .nav-options {
+  display: none;
+}
+
+.navbar .menu-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  height: 100%;
+  text-decoration: none;
+}
+
+.navbar .option-text {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-purple-title);
+
+  align-items: center;
+  display: flex;
+  padding: .3rem;
+
+  transition: .2s;
+  word-wrap: break-word;
+}
+
+.navbar .menu-option.selected {
+  background-color: var(--button-purple);
+  border-radius: 10px 10px 0 0;
+  cursor: auto;
+}
+
+.navbar .menu-option.selected .option-text {
+  color: var(--white-text)
+}
+
+.navbar .menu-option:not(.selected):hover .option-text {
+  background-color: var(--button-purple);
+  color: var(--white-text);
+}
+
+.navbar .team-container.desktop {
+  display: none;
+}
+
+.navbar .team-container {
+  display: flex;
+  width: auto;
+  align-items: center;
+  padding: .2rem 1rem;
+  text-decoration: none;
+}
+
+.navbar .team-name {
+  font-family: "Raleway";
+  font-weight: 700;
+  color: var(--dark-purple-title);
+  font-size: 5vw;
+  text-align: right;
+  margin-right: 0.5rem;
+  word-break: break-all;
+}
+
+.navbar .team-course {
+  font-weight: 300;
+  font-size: 2.5vw;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.navbar .team-image {
+  border-radius:100%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  border: 0.1rem solid var(--button-purple);
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--preference-course-background);
+  transition: .2s;
+}
+
+.navbar .menu-icon {
+  display: block;
+  width: 2.8rem;
+  height: 2.8rem;
+  color: var(--button-purple);
+}
+
+.navbar-wrapper .children {
+  /* position: relative;
+  top: 4.5rem;
+  left: 0;
+  right: 0; */
+  /* width: 100%; */
+  z-index: 10;
+}
+
+.sidebar .sidebar-background {
+  height: 100vh;
+  background-color: var(--dark-purple-title);
+  text-align: right;
+}
+
+.sidebar .sidebar-icon {
+  color: var(--white-text);
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .team-container {
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .team-container .team-name,
+.sidebar .team-container .team-course {
+  color: var(--white-text);
+}
+
+.sidebar .sidebar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .sidebar-content hr {
+  margin-left: 1.5rem;
+  margin-right:1.5rem;
+  border-color: var(--white-text);
+}
+
+.sidebar .sidebar-options {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: none;
+  align-items: center;
+}
+
+.sidebar .sidebar-menu-option {
+  font-family: "Raleway";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white-text);
+  margin: 2rem 0;
+  padding-top: .3rem;
+}
+
+/* .sidebar .sidebar-menu-option.selected {
+  border-left: 5px solid var(--chat-my-message);
+  border-radius: 3px;
+  padding-left: .5rem;
+  
+} */
+
+.sidebar .sidebar-menu-option.selected .sidebar-option {
+  text-decoration: none;
+  color: var(--chat-my-message);
+  border-right: 5px solid var(--chat-my-message);
+  border-radius: 3px;
+  padding-right: .5rem;
+}
+
+.sidebar .sidebar-menu-option .sidebar-option {
+  text-decoration: none;
+  color: var(--white-text)
+}
+
+.sidebar .team-container.selected{
+  border-right: 5px solid var(--chat-my-message);
+  border-radius: 3px;
+  padding-right: .5rem;
+  height: 4rem;
+}
+
+.sidebar .team-container.selected .text-container .team-name,
+.sidebar .team-container.selected .text-container .team-course {
+  color: var(--chat-my-message);
+}
+
+@media (min-width: 971px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 512px) 1fr;
+    padding: 0 2.5rem;
+  }
+
+  .navbar .logo-container {
+    justify-self: start;
+  }
+
+  .navbar .team-name {
+    font-size: 1.5vw;
+  }
+
+  .navbar .team-course {
+    font-size: 1vw;
+  }
+
+  .navbar .team-container.desktop {
+    display: flex;
+    justify-self: end;
+    transition: .15s all ease;
+    max-height: 4.5rem;
+    overflow: hidden;
+  }
+
+  .navbar .team-container.desktop.selected {
+    min-height: 100%;
+    background-color: var(--button-purple);
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .navbar .team-container.desktop.selected *, .navbar .team-container.desktop:hover * {
+    color: var(--white-text) !important;
+  }
+
+  .navbar .team-container.desktop:not(.selected):hover {
+    background-color: var(--button-purple);
+    cursor: pointer;
+  }
+  
+  .navbar .team-container.desktop:hover .team-image {
+    border: 0.1rem solid var(--white-text);
+  }
+
+  .navbar .nav-options {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    position: static;
+    opacity: 1;
+    justify-content: space-between;
+    width: 100%;
+  }  
+
+  .navbar .menu-icon {
+    display:none;
+  }
+
+  .navbar .menu-option {
+    height: 100%;
+    align-items: center;
+    display: flex;
+  }  
+}

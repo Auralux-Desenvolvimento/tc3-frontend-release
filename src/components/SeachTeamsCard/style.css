@@ -1,0 +1,123 @@
+.search-team-card-container {
+  background-color: var(--white-text);
+  padding: 1.8rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0.1875rem 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: .15s;
+  margin: 1rem 0 2rem 0;
+  text-decoration: none;
+  color: inherit !important;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.search-team-card-container:hover {
+  -moz-box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+  -webkit-box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+  box-shadow: .4875rem .6125rem .55rem 0 rgba(0,0,0,0.25);
+}
+
+.search-team-card-container .photo {
+  border-radius: 50%;
+  border: 0.1rem solid var(--button-purple);
+  font-size: .7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--preference-course-background);
+  transition: .2s;
+  overflow: hidden;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 6rem;
+  height: 6rem;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+
+.search-team-card-container .name {
+  font-family: Raleway, sans-serif;
+  color: var(--dark-purple-title);
+  font-size: 1.6rem;
+}
+
+.search-team-card-container .course {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.search-team-card-container .theme {
+  font-weight: 300;
+  font-size: 1.05rem;
+  margin: .5rem 0;
+}
+
+.search-team-card-container .name,
+.search-team-card-container .course,
+.search-team-card-container .theme {
+  text-align: center;
+}
+
+.search-team-card-container .link-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-team-card-container .link-button .responsive-button {
+  margin-top: 1rem;
+  width: 10rem;
+  
+}
+
+@media (min-width:768px) {
+  .search-team-card-container {
+    display: grid;
+    grid-template:
+    "photo name" min-content
+    "photo course" min-content
+    "photo theme" min-content
+    "photo button" auto
+    / 8rem auto;
+    width: 48%;
+    /* height: min-content; */
+  }
+
+  .search-team-card-container .photo {
+    grid-area: photo;
+    width: 8rem;
+    height: 8rem;
+    align-self: center;
+  }
+
+  .search-team-card-container .name {
+    grid-area: name;
+  }
+
+  .search-team-card-container .course {
+    grid-area: course;
+  }
+
+  .search-team-card-container .theme {
+    grid-area: theme;
+  }
+
+
+  .search-team-card-container .link-button {
+    grid-area: button;
+    margin-right: 0;
+    align-self: end;
+  }
+
+  .search-team-card-container .name,
+  .search-team-card-container .course,
+  .search-team-card-container .theme {
+    text-align: left;
+    margin-left: 2rem;
+    line-break: auto;
+  }
+}

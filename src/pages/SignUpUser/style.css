@@ -1,0 +1,213 @@
+/*não tem cadastro? cadastre-se*/
+.register .form-container .form .icon-required {
+  color: var(--icon-required);
+  float: right;
+}
+
+.register .content .icon-required-members {
+  color: var(--icon-required);
+  float: right;
+}
+
+.register .float-input .error, .register .search-list .error {
+  font-size: 1rem;
+  margin-right: 1.3rem;
+}
+
+.register .link-login {
+  color: var(--black-text);
+  font-family: Lora;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  text-decoration: none;
+  transition-duration: 0.15s;
+}
+
+.register .link-login:hover {
+  color: var(--optional-section);
+}
+
+.register .radio-title {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+
+  margin-top:1rem;
+}
+
+.register .line {
+  width: 75%;
+  background-color: var(--hr);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: .1rem;
+  border: none;
+  border-radius: 99rem;
+}
+
+.register .members-header,
+.register .advisors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.register .course-label {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+.register .advisor-container-title {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.3rem;
+
+  display: inline-block;
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+.register .button-add {
+  font-family: Raleway;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: var(--dark-purple-title);
+
+  cursor: pointer;
+}
+
+.register .members-container-title {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1.3rem;
+
+  display: inline-block;
+  margin: 0;
+}
+
+.register .member-box,
+.register .advisor-box {
+  background-color: var(--background-members-and-preferences);
+  border-radius: 0.335rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.register .member-box .member-photo-preview,
+.register .advisor-box .advisor-photo-preview {
+  border-radius:100%;
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+  background-color: var(--background-logo-team-and-profile);
+  border: 0.2rem solid var(--button-purple);
+  
+  
+  line-height: 7.5rem;
+  text-align: center;
+  color:var(--button-purple);
+}
+
+.register .button-remove-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 0.5rem;
+}
+
+.register .button-remove {
+  font-family: Raleway;
+  font-size: 3rem;
+  background: none;
+  border: none;
+  line-height: 0.5rem;
+
+  cursor: pointer;
+  transition: all ease .15s;
+  color: var(--dark-purple-title)
+}
+
+.register .button-remove:hover {
+  opacity: .8;
+}
+
+.register .add-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.register .add-container .button-add.down {
+  display: flex;
+  align-items: center;
+  transition: all ease .15s;
+}
+
+.register .add-container .button-add.down:hover {
+  opacity: .8;
+}
+
+.register .add-container .add {
+  font-size: 1.2rem;
+  margin-right: .5rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {  
+  .register .link-login {
+    font-size: 1rem;
+    justify-content: flex-start;
+  }
+
+  .register .content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .register .content .icon-required-members {
+    grid-column: 3;
+  }
+
+  .register .content .member-photo-preview,
+  .register .content .advisor-photo-preview {
+    margin-right: 1rem;  
+    background-color: var(--background-logo-team-and-profile);
+    border: 0.2rem solid var(--button-purple);
+    grid-row: 1 / span 2;
+  }
+
+  .register .content .member-input:nth-child(-n+3),
+  .register .content .advisor-input:nth-child(-n+3) {
+    grid-column: 2;
+    margin-left: 1.5rem;
+  }
+
+  .register .content .member-input,
+  .register .content .advisor-input {
+    grid-column: 1 / 4;
+  }
+
+  .register .content input[type="date"],
+  .register .content input[type="date"] {
+    font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+} 

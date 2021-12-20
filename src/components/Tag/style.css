@@ -1,0 +1,26 @@
+.tag-container {
+  display: inline-block;
+  border: .1rem solid var(--preference-course-border);
+  padding: .2rem 1rem;
+  border-radius: 10rem;
+  background-color: var(--preference-course-background);
+  font-style: normal !important;
+}
+
+.tag-container .tag {
+  display: inline-block;
+  font-weight: 300;
+}
+
+.tag-container .remove-tag {
+  margin-left: .5rem !important;
+  all: unset;
+  cursor: pointer;
+  height: .625rem;
+  color: var(--preference-course-border);
+  transition-duration: .2s;
+}
+
+.tag-container .remove-tag:hover {
+  color: var(--button-red);
+}

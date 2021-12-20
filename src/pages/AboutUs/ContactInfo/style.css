@@ -1,0 +1,66 @@
+.contact-info {
+  background-color: var(--chat-other-message);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  border-radius: 99rem;
+}
+
+.contact-info a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .15s all ease;
+  position: relative;
+}
+
+.contact-info a + a {
+  margin-left: .5rem;
+}
+
+.contact-info svg {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info path {
+  fill: var(--white-text);
+  transition: .15s all ease;
+}
+
+.contact-info a:hover path {
+  fill: var(--chat-other-message);
+}
+
+.contact-info a:hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 99rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--transparent-white);
+  z-index: 1;
+  animation: expand-hover .15s ease-out forwards;
+}
+
+@keyframes expand-hover {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: .5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-info {
+    flex-flow: column;
+  }
+
+  .contact-info a + a {
+    margin-left: 0;
+    margin-top: .5rem;
+  }
+}

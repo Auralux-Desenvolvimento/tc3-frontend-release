@@ -1,0 +1,194 @@
+.mod-profile-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.mod-profile-page .content {
+  padding: 0 2rem;
+}
+
+.mod-profile-page .content .profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mod-profile-page .content .title {
+  font-family: Raleway, sans-serif;
+  color: var(--dark-purple-title);
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.mod-profile-page .content .info {
+  margin: .2rem 0;
+  font-weight: 300;
+}
+
+.mod-profile-page .content .responsive-button {
+  margin-top: 1rem;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+}
+
+.mod-profile-page .content .access-keys {
+  display: flex;
+  flex-flow: column;
+}
+
+.mod-profile-page .content .access-keys .generate-key {
+  text-decoration-line: underline;
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all ease .15s;
+  color: var(--dark-purple-title);
+  background: none;
+  border:none;
+  margin-bottom: .5rem;
+}
+
+.mod-profile-page .content .access-keys .key-container {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  border: 3px solid var(--hr);
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.mod-profile-page .content .access-keys .key-container > p,
+.mod-profile-page .content .access-keys .key-container > div {
+  padding: .5rem;
+}
+
+.mod-profile-page .content .access-keys .key-container .keys,
+.mod-profile-page .content .access-keys .key-container .created-by,
+.mod-profile-page .content .access-keys .key-container .used-by {
+  border-bottom: 3px solid var(--hr);
+  background-color: var(--hr);
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 600;
+  color: var(--white-text);
+}
+
+.mod-profile-page .content .access-keys .key-container .keys,
+.mod-profile-page .content .access-keys .key-container .created-by {
+  border-right: 3px solid var(--white-text);
+}
+
+.mod-profile-page .content .access-keys .key-container .keys {
+  border-radius: 11px 0 0 0;
+}
+
+.mod-profile-page .content .access-keys .key-container .used-by {
+  border-radius: 0 11px 0 0;
+}
+
+.mod-profile-page .content .access-keys .key-container .key,
+.mod-profile-page .content .access-keys .key-container .creator,
+.mod-profile-page .content .access-keys .key-container .user {
+  border-top: 3px solid var(--hr);
+}
+
+.mod-profile-page .content .access-keys .key-container .key,
+.mod-profile-page .content .access-keys .key-container .creator {
+  border-right: 3px solid var(--hr);
+}
+
+.mod-profile-page .content .access-keys .key-container .creator-email,
+.mod-profile-page .content .access-keys .key-container .user-email {
+  font-weight: 300;
+  font-style: italic;
+  word-break: break-word;
+}
+
+.mod-profile-page .content .responsive-button.exit {
+  background-color: var(--white-text);
+  color: var(--button-red);
+  border-color: var(--button-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .15s;
+  padding: .25rem 2.5rem;
+}
+
+.mod-profile-page .content .responsive-button.exit p {
+  padding-left: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.mod-profile-page .content .responsive-button.exit:hover {
+  background-color: var(--button-red);
+  color: var(--white-text);
+  border-color: var(--button-red);
+}
+
+@media (min-width:944px) {
+  .mod-profile-page .content {
+    display: flex;
+  }
+  .mod-profile-page .content .profile-info {
+    width: calc(30% - 3rem);
+    margin-right: 3rem;
+  }
+
+  .mod-profile-page .content .access-keys:before {
+    position: fixed;
+    left: calc(30% - 2rem);
+    top: calc(50% + 2.2rem);
+    transform: translate(0, -50%);
+    background-color: var(--hr);
+    display: block;
+    content: "";
+    width: 0.2rem;
+    height: 75vh;
+    border-radius: 99rem;
+  }
+  
+  .mod-profile-page .content .access-keys {
+    width: 70%;
+  }
+
+  .mod-profile-page .content .title {
+    padding-top: 1.5rem;
+  }
+
+  .mod-profile-page .content .access-keys .key-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .mod-profile-page .content .access-keys .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: .5rem;
+  }
+
+  .mod-profile-page .content .access-keys .generate-key {
+    margin: 0;
+    padding-top: 1.6rem;
+  }
+  
+  .mod-profile-page .content .access-keys .title {
+    padding-bottom: 0;
+  }
+
+  .mod-profile-page .content .responsive-button {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .mod-profile-page .content .responsive-button.exit {
+    padding: .25rem 2.9rem;
+  }
+
+  .mod-profile-page .content .responsive-button.exit p {
+    font-size: 1.5rem;
+  }
+}

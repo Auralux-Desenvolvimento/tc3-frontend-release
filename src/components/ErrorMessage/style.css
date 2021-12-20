@@ -1,0 +1,63 @@
+.error-message {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  min-height: 2rem;
+  background-color: var(--background-error);
+  color: var(--white-text);
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 0 0.4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 3.2rem;
+}
+
+.error-message.warning {
+  background-color: var(--warning);
+}
+
+.error-message .close {
+  position: absolute;
+  right: 1.5rem;
+  border-radius: 99rem;
+  transition: .15s ease all;
+  cursor: pointer;
+  /* padding: .005rem; */
+  font-size: 1.7rem;
+}
+
+.error-message .close path {
+  fill: var(--white-text);
+  stroke-width: .5rem;
+}
+
+.error-message .close:hover path {
+  fill: var(--background-error);
+}
+
+.error-message .close:hover {
+  background-color: var(--white-text);
+}
+
+.error-message.warning .close:hover path {
+  color: var(--warning);
+}
+
+.error-message.success {
+  background-color: var(--success);
+}
+
+.error-message.success .close:hover path {
+  color: var(--success);
+}
+
+@media (min-width: 768px) {
+  .error-message .error-message {
+    font-size: 1.4rem;
+  }
+}

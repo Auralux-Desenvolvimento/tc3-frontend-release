@@ -1,0 +1,33 @@
+.posts-page  {
+  display: flex;
+  flex-flow: column;
+}
+
+.posts-page .post-container {
+  padding: 0 2rem;
+}
+
+.posts-page .new-post {
+  margin-top: 1rem;
+  text-decoration-line: underline;
+  font-family: poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all ease .15s;
+  color: var(--dark-purple-title);
+  background: none;
+  border:none;
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 768px) {
+  .posts-page .post-container {
+    padding: 0 3rem;
+  }
+
+  .posts-page .new-post {
+    font-size: 1.1rem;
+  }
+}

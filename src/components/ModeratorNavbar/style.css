@@ -1,0 +1,89 @@
+.navbar .moderator-container.desktop {
+  display: none;
+}
+
+.navbar-wrapper.has-children .navbar {
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1); 
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+}
+
+.navbar .moderator-container {
+  display: flex;
+  width: auto;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar .moderator-container .moderator-name {
+  font-family: "Raleway";
+  font-weight: 700;
+  color: var(--white-text);
+  font-size: 1.5rem;
+  text-align: right;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.sidebar .moderator-container {
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar .moderator-container .moderator-moderator {
+  color: var(--white-text);
+}
+
+.sidebar .moderator-container.selected {
+  border-right: 5px solid var(--chat-my-message);
+  border-radius: 3px;
+  padding-right: .5rem;
+  height: 2rem;
+}
+
+.sidebar .moderator-container.selected .moderator-name {
+  color: var(--chat-my-message);
+}
+
+@media (min-width: 971px) {
+  .navbar .moderator-container.desktop {
+    display: flex;
+    justify-self: right;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .moderator-container.desktop .moderator-name {
+    display: inline-block;
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-purple-title);
+    align-items: center;
+    display: flex;
+    padding: .3rem .5rem;
+    transition: .2s;
+    word-wrap: break-word;
+  }
+  
+  .moderator-container.desktop .moderator-name:hover {
+    background-color: var(--button-purple);
+    color: var(--white-text);
+  }
+  
+  .navbar  .moderator-container.desktop.selected {
+    width: auto;
+    height: 100%;
+    background-color: var(--button-purple);
+    border-radius: 10px 10px 0 0;
+    cursor: auto;
+  }
+  
+  .navbar  .moderator-container.desktop.selected .moderator-name {
+    padding: .3rem 1rem;
+    color: var(--white-text);
+  }
+
+}

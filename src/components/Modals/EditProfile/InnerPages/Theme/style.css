@@ -1,0 +1,26 @@
+.theme-container .responsive-button{
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .theme-container .theme-wrapper {
+    display: grid;
+    grid-template:
+    "theme remove-theme"
+    /2fr auto;
+    align-items: center;
+    column-gap: .5rem
+  }
+
+  .theme-container .theme-wrapper .theme-input {
+    grid-area: theme;
+  }
+
+  .theme-container .theme-wrapper .responsive-button {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    grid-area: remove-theme;
+    height: 2.5rem;
+    width: auto;
+  }
+}

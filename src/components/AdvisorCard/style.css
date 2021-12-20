@@ -1,0 +1,104 @@
+.advisor-card {
+  background-color: var(--white-text);
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  display: block;
+  -webkit-box-shadow: 0 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  box-shadow: 0 0.3125rem 0.25rem 0 rgba(0,0,0,0.25);
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.advisor-card .remove {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--dark-purple-title);
+  padding: .25rem;
+  border-radius: 0.625rem;
+  transition: .15s ease all;
+  cursor: pointer;
+}
+
+.advisor-card .remove:hover {
+  color: var(--white-text);
+  background-color: var(--error);
+}
+
+.advisor-card .photo {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 99rem;
+  margin-bottom: 0.5rem;
+}
+
+.advisor-card .name {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.advisor-card .email {
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 0.3rem;
+  font-size: 1.25rem;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .advisor-card {
+    display: grid;
+    grid-template: 
+    "photo name name"
+    "photo email email"    
+    / auto 1fr 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .advisor-card .photo {
+    grid-area: photo;
+    border-radius:100%;
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: contain;
+    
+    display: block;
+    margin-bottom: 0;
+
+    background-color: var(--background-logo-team-and-profile);
+    
+    line-height: 7.5rem;
+    text-align: center;
+    color:var(--button-purple);
+  }
+
+  .advisor-card .name {
+    grid-area: name;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-left:0;
+    margin-right: auto;
+    width: 100%;
+    padding-right: 2.25rem;
+  }
+
+  .advisor-card .email {
+    grid-area: email;
+    text-align: left;
+    font-size: .9rem;
+    line-height: .7rem;
+    margin-top: 0;
+  }
+
+  .advisor-card .name,
+  .advisor-card .email {
+    margin-left: .3rem;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,185 @@
+.report-page {
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.report-page .content {
+  margin: 2rem;
+}
+
+
+.report-page .content .report-header .return-wrapper {
+  width: 2rem;
+  height: 2rem;
+  align-self: center;
+  margin-right: .5rem;
+  }
+
+.report-page .content .report-header .return {
+  display: inline-block;
+  position: absolute;
+  width: 2rem;
+  align-self: center;
+  height: 2rem;
+  color: var(--dark-purple-title);
+  transition: .15s all ease;
+  border-radius: 99rem;
+}
+
+.report-page .content .report-header .return:hover {
+  color: var(--white-text);
+  background-color: var(--pattern-purple);
+}
+
+.report-page .title,
+.report-page .content .report-header .code {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--dark-purple-title);
+}
+
+.report-page .content .report-header .code {
+  word-wrap: break-word;
+}
+
+.report-page .content .report-header .title {
+  display: inline-block;
+  font-size: 1.875rem;
+  margin-left: 1.6rem;
+}
+
+.report-page .content .report-header .date {
+  margin-top: 0.3rem;
+}
+
+.report-page .content .hr {
+  margin: 0.7rem 0 1.3rem 0;
+  border-width: 0;
+	height: 0.063rem;
+	border-top-width: 0.063rem;
+}
+
+.report-page .content .report-body .title,
+.report-page .content .report-message .title {
+  font-size: 1.4rem;
+}
+
+.report-page .content .report-message .title {
+  margin-bottom: 0.4rem;
+}
+
+.report-page .content .report-message .message {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.report-page .content .responsive-button {
+  width: auto;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.report-page .content .chat-history {
+  margin-top: 1rem;
+}
+
+.report-page .content .chat-history .title {
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+}
+
+.report-page .content .chat-history .info .chat-data {
+  font-weight: 300;
+}
+
+.report-page .content .chat-history .chat-container {
+  background-color: var(--white-text);
+  margin-top: 1rem;
+  border-radius: 15px;
+  padding-bottom: .5rem;
+}
+
+.report-page .content .chat-history .chat-container .chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem .6rem .3rem .6rem;
+  border-bottom: .1rem solid var(--pattern-purple);
+}
+
+.report-page .content .chat-history .chat-container .chat-header .team-name {
+  font-family: Raleway;
+  font-weight: bold;
+  color: var(--dark-purple-title);
+  font-size: 1.2rem;
+}
+
+.report-page .content .chat-history .chat-container .chat {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: column;
+  padding: 1rem .6rem;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1600px;
+  flex-grow: 1;
+}
+
+.report-page .content .chat-history .chat-container .chat .date {
+  background-color: var(--chat-other-message);
+  color: var(--white-text);
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  margin-bottom: .5rem;
+}
+
+@media (min-width: 768px) {
+  .report-page .content .report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .report-page .content .report-header .title {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+
+  .report-page .content .report-header .date {
+    margin-top: 0rem;
+    margin-left: auto;
+  }
+
+  .report-page .content .hr {
+    margin-top: 0;
+  }
+
+  .report-page .content .report-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .report-page .content .report-body .report {
+    width: 48%;
+  }
+
+  .report-page .content .chat-history .chat-container {
+    margin-top: 1.5rem;
+  }
+
+  .report-page .content .chat-history .chat-container .chat-header,
+  .report-page .content .chat-history .chat-container .chat {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .report-page .content .chat-history .info {
+    display: flex;
+    justify-content: space-between;
+  }
+}

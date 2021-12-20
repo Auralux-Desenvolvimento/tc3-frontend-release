@@ -1,0 +1,37 @@
+.loading-container {
+  max-width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2.188rem;
+  margin: 0 auto;
+}
+
+.loading-container.right {
+  margin: 0;
+  margin-left: auto;
+}
+
+.loading-container.left {
+  padding-top: 2rem;
+  margin: 0;
+  margin-right: auto;
+}
+
+.loading-container.center {
+  margin: 0 auto;
+}
+
+.loading-container .loading-text {
+  margin-left: .5rem;
+  font-weight: 24;
+  font-size: 1rem;
+  font-family: Poppins;
+  color: var(--button-purple);
+}
+
+.loading-container .loading-icon {
+  display: flex;
+}
